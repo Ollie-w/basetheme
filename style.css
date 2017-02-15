@@ -380,7 +380,7 @@ ol {
 	list-style: none;
 }
 
-.post ul {
+.post ul:not(.post-categories) {
 	list-style: disc;
 }
 
@@ -829,7 +829,7 @@ a[class*="tag-link"] {
 
 .widget_categories ul {
 	column-count: 4;
-    column-width: 200px;
+    column-width: 150px;
     list-style: none;
 }
 
@@ -947,11 +947,18 @@ column-width: 100px;
     font-weight: 200;
 }
 
-.entry-header {
+@media (min-width: 600px) {
+.blog .entry-header {
   width: 30%;
   float: left;
   top: 0;
   position: sticky; 
+}
+.entry-content, .entry-footer {
+  width: 70%;
+  float: right;
+  display: inline-block;
+}
 }
 
 .entry-title {
@@ -971,11 +978,7 @@ column-width: 100px;
   width: 100%;
 }
 
-.entry-content, .entry-footer {
-  width: 70%;
-  float: right;
-  display: inline-block;
-}
+
 
 p:first-of-type {
 	margin-top: 0;
@@ -987,6 +990,16 @@ p:first-of-type {
 
 .entry-meta > * {
     display: block;
+}
+
+.cat-links li {
+	display: inline-block;
+}
+
+@media (min-width: 600px) {
+	.cat-links li {
+		display: block;
+	}
 }
 
 .cat-links a {

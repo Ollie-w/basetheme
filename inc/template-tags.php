@@ -36,7 +36,7 @@ function base_theme_posted_on() {
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
-	$categories_list = get_the_category_list('<br>');
+	$categories_list = get_the_category_list();
 		if ( $categories_list && base_theme_categorized_blog() ) {
 			printf( '<span class="cat-links">' . esc_html__( '%1$s', 'base_theme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}

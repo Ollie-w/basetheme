@@ -788,6 +788,7 @@ column-count: 2;
 column-width: 300px;
 column-gap: 40px;
 text-align: center;
+font-size: .85rem;
 }
 
 .widget-area > * {
@@ -821,6 +822,7 @@ a[class*="tag-link"] {
     line-height: 1;
     display: inline-block;
 	letter-spacing: .5px;
+	font-size: .85rem !important;
 }
 
 /*--------------------------------------------------------------
@@ -872,11 +874,16 @@ column-width: 100px;
 
 .calendar_wrap {
 	background-color: white;
-    padding: .05rem 0;
+    padding: .05rem 1.5rem;
+    display: inline-block;
 }
 
 .calendar_wrap table {
 	margin: auto;
+}
+
+.widget_calendar {
+    text-align: center;
 }
 
 /*--------------------------------------------------------------

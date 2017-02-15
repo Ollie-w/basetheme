@@ -648,6 +648,12 @@ textarea {
 	display: block;
 }
 
+.comments-area {
+    max-width: 1000px;
+    margin: 0 auto;
+	text-align: left;
+}
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -701,6 +707,37 @@ object {
 
 .wp-caption-text {
 	text-align: center;
+}
+
+@supports (display: grid) and (display: contents) {
+.comment-form {
+display: grid;
+grid-template-columns: auto 1fr;
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+}
+
+.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url, .form-submit {
+	display: contents;
+}
+
+.comment-notes {
+    grid-column: 2;
+	margin: 0;
+}
+
+.comment-form label {
+	grid-column: 1;
+}
+
+input {
+	max-width: 408px;
+}
+
+.submit {
+	grid-column: 2;
+	justify-self: start;
+}
 }
 
 /*--------------------------------------------------------------
